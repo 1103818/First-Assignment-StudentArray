@@ -39,8 +39,8 @@ public class StudentDB {
     }
     
     void showNames(){
-        for(String name : studentNames){
-            System.out.println(name);
+        for(int i = 0; i < nextIndex; i++){
+            System.out.println(i+1 + " :=: " + studentNames[i]);
         }
     }
 

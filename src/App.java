@@ -7,8 +7,10 @@ public class App {
         stdDBObj.insertName("Muneeb");
         // System.out.print(stdDBObj.search("Faisal"));
         // System.out.println(stdDBObj.getName(0));
+        System.out.println("before delete ... ");
         stdDBObj.showNames();
         stdDBObj.delete(0);
+        System.out.println("after delete ... ");
         stdDBObj.showNames();
     }
 }
