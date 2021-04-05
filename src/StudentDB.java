@@ -13,13 +13,11 @@ public class StudentDB {
     }
     int search(String searchItem){
         int index = -1;
-        for (int i = 0; i <= nextIndex; i++){
+        for (int i = 0; i < nextIndex; i++){
             String value = studentNames[i];
-            if (value != null){
-                if (value == searchItem){
-                    index = i;
-                    break;
-                }
+            if (value == searchItem){
+                index = i;
+                break;
             }
         }
         return index;
