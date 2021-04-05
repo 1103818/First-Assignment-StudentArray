@@ -8,7 +8,7 @@ public class App {
         // System.out.print(stdDBObj.search("Faisal"));
         // System.out.println(stdDBObj.getName(0));
         stdDBObj.showNames();
-        stdDBObj.delete(1);
+        stdDBObj.delete(0);
         stdDBObj.showNames();
     }
 }

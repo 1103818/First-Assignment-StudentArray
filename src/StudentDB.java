@@ -13,7 +13,7 @@ public class StudentDB {
     }
     int search(String searchItem){
         int index = -1;
-        for (int i = 0; i < studentNames.length; i++){
+        for (int i = 0; i <= nextIndex; i++){
             String value = studentNames[i];
             if (value != null){
                 if (value == searchItem){
@@ -29,14 +29,15 @@ public class StudentDB {
         return studentNames[index];
     }
 
-    boolean delete(int index){
-        for (int i = 0; i < studentNames.length - 1; i++){
+    void delete(int index){
+        for (int i = 0; i < nextIndex; i++){
             studentNames[i] = studentNames[i];
             if (i >= index){
                 studentNames[i] = studentNames[i+1];
             }
         }
-        return true;
+        studentNames[nextIndex - 1] = null;
+        nextIndex--;
     }
     
     void showNames(){
